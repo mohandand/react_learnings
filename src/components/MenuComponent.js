@@ -1,8 +1,7 @@
 import React, { useState }  from 'react';
 import { Media } from 'reactstrap';
-const Menu = () => {
+const Menu = ({dishes}) => {
 
-    const[dishes ,setDishes] = useState()
     const Menu = dishes.map((dish) => {
         return(
                 <div key={dish.id} className="col-12 mt-5">
