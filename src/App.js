@@ -1,4 +1,5 @@
 import { Navbar, NavbarBrand} from 'reactstrap';
+import Menu from "./components/MenuComponent"
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
               <NavbarBrand href="/">Mohan Dandigam</NavbarBrand>
           </div>
       </Navbar>
+      <Menu />
     </div>
   );
 }
