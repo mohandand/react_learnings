@@ -10,6 +10,8 @@ import DishDetail from './DishdetailComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'; //withRouter for redux usage purpose.
 import { connect } from 'react-redux'
 
+import { addComment } from '../redux/ActionCreators';
+
 // This funtion will map the redux storesstate into props that will become avilable to my component
 
 const mapStatesToProp = state => {
@@ -20,6 +22,12 @@ const mapStatesToProp = state => {
         leaders:state.leaders
     }
 }
+
+const mapDispatchToProps = dispatch => ({
+  
+    addComment: (dishId, rating, author, comment) => dispatch(addComment(dishId, rating, author, comment))
+  
+  });
 
 class Main extends Component {
 
